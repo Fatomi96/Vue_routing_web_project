@@ -4,7 +4,7 @@
 
     <div class="d-flex">
       <input v-model="task" type="text" placeholder="Enter task" class="form-control">
-      <button @click="submitTask" class="btn btn-warning">Add</button>
+      <button @click="addTask" class="btn btn-warning">Add</button>
     </div>
 
     <table class="table table-bordered mt-5">
@@ -48,7 +48,7 @@ export default {
       this.formData.splice(index, 1);
     },
 
-    submitTask() {
+    addTask() {
       if (this.task.length === 0) {
         return;
       } else {
